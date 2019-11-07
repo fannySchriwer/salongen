@@ -19,10 +19,10 @@ class Salon extends Component {
             <img src="/assets/star-outlined.svg" alt="star" />
             <p className="small-grey-text">(32)</p>
           </div>
-          <p className="small-grey-text">Rådmansgatan 46</p>
+          <p className="small-grey-text">{this.props.salon.adress}</p>
         </div>
         <div className="double-cell align-right">
-          <p className="bold-text">320 kr</p>
+          <p className="bold-text">{this.props.salon.price} kr</p>
           <p className="small-grey-text">30 min</p>
         </div>
         <div className="cell align-right vertical-center">
