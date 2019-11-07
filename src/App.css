@@ -1,22 +1,232 @@
-.App {
+/*
+CSS contents
+
+1. Basic css reset
+2. Typography
+3. Inputs
+4. Layout
+5. Buttons
+*/
+
+@font-face {
+  font-family: 'MillerBanner';
+  src: local('MillerBanner'), url(./fonts/MillerBanner-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url(./fonts/helveticaneue-light.ttf) format('truetype');
+}
+:root {
+  --highlight-yellow: #b69f58;
+  --highlight-grey: #666666;
+  --highlight-light-grey: #656565;
+  --border-light-grey: #eeeeee;
+  --background-light-grey: #f9f9f9;
+  --black: #202020;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: .0;
+  padding: .5rem;
+  font-family: 'MillerBanner';
+}
+
+body {
+  font-family: 'MillerBanner';
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Typography*/
+
+h1, h2, h3, h4, h5 {
+  font-family: 'MillerBanner';
+  font-weight: 300;
+}
+
+p, a, li, label, select, option {
+  font-family: 'helveticaNeue';
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.bold-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.small-text {
+  font-size: 13px;
+}
+
+.small-grey-text {
+  font-size: 13px;
+  color: var(--highlight-grey);
+}
+
+/*Inputs*/
+
+select.filter-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-image: url(/assets/arrow-down.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+	background-position: center right;
+  width: 100%;
+}
+
+/*Layout*/
+.topbar,
+.filter-row,
+.salon-row,
+.hero-top-bar,
+.salon-review,
+.description,
+.info-tab {
+  padding: .5rem;
+}
+
+.topbar,
+.filter-row,
+.salon-row,
+.hero-top-bar,
+.row,
+.align-right {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+}
+
+.double-cell {
+  flex: 3;
+}
+
+.break {
+  height: 20px;
+  background-color: var(--background-light-grey);
+}
+
+.vertical-center {
+  justify-content: center;
+}
+
+.align-right {
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.topbar,
+.filter-row {
+  border-bottom: 1px solid var(--highlight-yellow);
+  height: 50px;
+  align-items: center;
+}
+
+.topbar, .hero-top-bar {
+  justify-content: space-between;
+}
+
+.salon-row, .salon-info .row {
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--border-light-grey);
+}
+
+.salon-info .row {
+  padding: .5rem 1rem;
+}
+
+.hero-image {
+  background-image: url(/assets/hair-salon-image.png);
+  height: 45vh;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.salon-review {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7318277652858018) 29%, rgba(0,0,0,0) 98%);
+}
+
+.rating-stars {
+  display: flex;
+  margin-left: .5rem;
+}
+
+.rating-stars img {
+  padding-right: .2rem;
+}
+
+.hero-image .rating-stars img {
+  width: .9rem;
+}
+
+.info-tab {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.info-tab.active {
+  border-bottom: 2px solid var(--highlight-yellow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.salon-info img.icon {
+  width: 14px;
 }
 
-.App-link {
-  color: #09d3ac;
+.description {
+  max-width: 650px;
+}
+
+/*Buttons*/
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
