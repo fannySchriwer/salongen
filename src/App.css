@@ -5,6 +5,9 @@ CSS contents
 2. Typography
 3. Inputs
 4. Layout
+   4.1 Salon List
+   4.2 Salon Details
+   4.3 Salon
 5. Buttons
 */
 
@@ -28,7 +31,7 @@ CSS contents
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 *, *:before, *:after {
@@ -42,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 body {
-  font-family: 'MillerBanner';
+  font-family: 'helveticaNeue';
 }
 
 a, a:link, a:visited, a:hover, a:active {
@@ -83,17 +86,15 @@ h3 {
   font-size: 15px;
 }
 
-.small-text {
+.small-text, .small-grey-text {
   font-size: 13px;
 }
 
 .small-grey-text {
-  font-size: 13px;
   color: var(--highlight-grey);
 }
 
 /*Inputs*/
-
 select.filter-select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -150,6 +151,11 @@ select.filter-select {
   text-align: right;
 }
 
+.topbar, .hero-top-bar {
+  justify-content: space-between;
+}
+
+/*Salon list*/
 .topbar,
 .filter-row {
   border-bottom: 1px solid var(--highlight-yellow);
@@ -157,10 +163,7 @@ select.filter-select {
   align-items: center;
 }
 
-.topbar, .hero-top-bar {
-  justify-content: space-between;
-}
-
+/*Salon details*/
 .salon-row, .salon-info .row {
   flex-wrap: nowrap;
   border-bottom: 1px solid var(--border-light-grey);
@@ -217,7 +220,6 @@ select.filter-select {
 }
 
 /*Buttons*/
-
 button {
   outline: none;
   border: none;

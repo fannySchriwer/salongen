@@ -23,9 +23,12 @@ class SalonList extends Component {
 	}
 	
 	componentDidMount() {	
-		const option = parseInt(localStorage.getItem('filterValue'));
-		this.setState({ value : option, salons: salons['data']}, () => {});
-		this.filterSalonsByPrice(option);
+    let option = parseInt(localStorage.getItem('filterValue'));
+    if(!option) {
+      option = 0;
+    }
+    this.setState({ value : option, salons: salons['data']});
+    this.filterSalonsByPrice(option);
 	}
 
   handleChange = option => {
@@ -56,17 +59,18 @@ class SalonList extends Component {
 				if(salon.price > 1000) {
 					return salon
 				}
-			} else if(optionInt === 0) {
+      } 
+      if(optionInt === 0) {
 				return salon
 			} 
 		});
 		
-		this.setState({ value: optionInt, salons: filteredSalons }, () => {});
+		this.setState({ value: optionInt, salons: filteredSalons });
 	}
 
   render() {
     return (
-      <div className="App">
+      <div>
 				<div className="topbar">
 					<img className="go-back-arrow" src="/assets/arrow-left.svg" alt="back"/>
 					<h2>Hår</h2>
