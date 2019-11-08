@@ -104,8 +104,9 @@ select.filter-select {
   background-image: url(/assets/arrow-down.svg);
   background-repeat: no-repeat;
   cursor: pointer;
-	background-position: center right;
+  background-position: center right;
   width: 100%;
+  background-color: white;
 }
 
 /*Layout*/
