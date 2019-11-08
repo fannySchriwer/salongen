@@ -124,7 +124,9 @@ select.filter-select {
 .salon-row,
 .hero-top-bar,
 .row,
-.align-right {
+.align-right,
+.rating-stars,
+.hero-image {
   display: flex;
 }
 
@@ -177,12 +179,12 @@ select.filter-select {
   background-image: url(/assets/hair-salon-image.png);
   height: 45vh;
   padding-top: 1rem;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .salon-review {
@@ -191,7 +193,6 @@ select.filter-select {
 }
 
 .rating-stars {
-  display: flex;
   margin-left: .5rem;
 }
 
