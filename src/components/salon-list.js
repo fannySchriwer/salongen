@@ -70,7 +70,7 @@ class SalonList extends Component {
 
   render() {
     return (
-      <div>
+      <div class="wrapper">
 				<div className="topbar">
 					<img className="go-back-arrow" src="/assets/arrow-left.svg" alt="back"/>
 					<h2>Hår</h2>
