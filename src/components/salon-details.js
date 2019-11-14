@@ -27,7 +27,7 @@ class SalonDetails extends Component {
     });
 
     return (
-      <div>
+      <div class="page-wrapper">
         <section className="hero-image">
           <div className="hero-top-bar">
             <button onClick={this.goBack}><img className="go-back-arrow" src="/assets/white-arrow-left.svg" alt="back"/></button>
